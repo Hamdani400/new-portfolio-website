@@ -6,17 +6,18 @@ import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 import {makeStyles} from '@mui/styles';
 import Typography from '@mui/material/Typography';
+import clsx from 'clsx';
 
 const useStyle = makeStyles ({
   navtext: {
     color: 'white',
   },
   navitem: {
-    display: 'flex',
     justifyContent: 'right',
   },
   navbar: {
     display: 'flex',
+    paddingRight: '9rem !important',
   },
 });
 
@@ -30,21 +31,33 @@ export default function Navbar () {
           <List className={classes.navbar}>
             <ListItemText>
               <Link to="/" style={{textDecoration: 'none'}}>
-                <Typography variant="body2" ml={3} className={classes.navtext}>
+                <Typography
+                  variant="body2"
+                  ml={8}
+                  className={clsx (classes.navtext, 'hvr-underline-from-left')}
+                >
                   Home
                 </Typography>
               </Link>
             </ListItemText>
             <ListItemText>
               <Link to="/project" style={{textDecoration: 'none'}}>
-                <Typography variant="body2" ml={3} className={classes.navtext}>
+                <Typography
+                  variant="body2"
+                  ml={8}
+                  className={clsx (classes.navtext, 'hvr-underline-from-left')}
+                >
                   Project
                 </Typography>
               </Link>
             </ListItemText>
             <ListItemText>
               <Link to="/experience" style={{textDecoration: 'none'}}>
-                <Typography variant="body2" ml={3} className={classes.navtext}>
+                <Typography
+                  variant="body2"
+                  ml={8}
+                  className={clsx (classes.navtext, 'hvr-underline-from-left')}
+                >
                   Experience
                 </Typography>
               </Link>
